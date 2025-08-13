@@ -45,11 +45,39 @@ body {
   text-decoration: none;
 }
 
-
 .logo img {
   margin-top: 9px;
   max-height: 180px;
   display: block;
+}
+
+.circulo-fondo {
+  position: absolute;
+  top: 10px;
+  left: 193px;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, #ffffff, #ffffff);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.header-center.logo {
+  position: relative;
+  /* permite posicionar el círculo dentro */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 150px;
+}
+
+/* Logo encima del círculo */
+.header-center.logo img {
+  position: relative;
+  z-index: 1;
+  /* encima del círculo */
+  max-height: 180px;
+  /* ajusta tamaño del logo */
 }
 
 
@@ -79,8 +107,6 @@ body {
   border-radius: 20px;
   margin-top: 30px;
 }
-
-
 
 .orden-texto {
   margin-bottom: 40px;
@@ -232,6 +258,55 @@ body {
   font-size: 24px;
   cursor: pointer;
 }
+
+.main-footer {
+  /* Estilo general del pie de página */
+  background-color: #9b9b9b;
+  /* Fondo */
+  padding: 100px 10px;
+  /* Espaciado interno arriba/abajo 20px y lados 10px */
+  text-align: center;
+  /* Centrar el contenido del footer */
+  color: white;
+  /* Texto blanco */
+  font-size: 16px;
+  /* Tamaño del texto */
+  margin-top: 40px;
+  /* Separación desde el contenido superior */
+}
+
+.footer-content {
+  /* Contenedor para limitar ancho del contenido */
+  max-width: 1000px;
+  /* Máximo ancho de 1000px */
+  margin: 0 auto;
+  /* Centrar horizontalmente */
+}
+
+.footer-links {
+  /* Contenedor de los enlaces del footer */
+  margin-top: 10px;
+  /* Espacio arriba respecto al texto */
+}
+
+.footer-links a {
+  /* Estilo de todos los enlaces en el footer */
+  color: white;
+  /* Texto blanco */
+  margin: 0 10px;
+  /* Separación horizontal entre enlaces */
+  text-decoration: none;
+  /* Quitar subrayado por defecto */
+  font-size: 14px;
+  /* Tamaño del texto de enlaces */
+}
+
+.footer-links a:hover {
+  /* Efecto al pasar el ratón sobre el enlace */
+  text-decoration: underline;
+  /* Subrayar al pasar el mouse */
+}
+
 
 /* PAGINA DE PROMOS */
 
